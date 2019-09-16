@@ -1,2 +1,3 @@
 #!/bin/bash
-export TRUEKNOWLEDGE="1209+128"
+TRUEKNOWLEDGE+128
+
