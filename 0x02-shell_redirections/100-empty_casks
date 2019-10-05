@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./ -type d -empty
+find ./ -type d -size 0 | wc -l
