@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./ -type d -size 0 | wc -l
+find ./ -empty -exec ls -Fd {} \;
