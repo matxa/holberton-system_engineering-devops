@@ -4,5 +4,11 @@
 input="/etc/passwd"
 while IFS= read -r line
 do
-    echo "The user $line is part of the $line gang, lives in $line and rides $line. $line's place is protected by the passcode $line, more info about the user here: $line " | cut -d':' -f 1,4,6,7,2,1
+    USERNAME = "$line" | cut -d':' -f 1
+    GROUP_ID = "$line" | cut -d':' -f 4
+    HOME_DIRECTORY = "$line" | cut -d':' -f 6
+    COMMAND_SHELL = "$line" | cut -d':' -f 7
+    USER_ID = "$line" | cut -d':' -f 3
+    PASSWORD = "$line" | cut -d':' -f 2
+    echo "The user $line is part of the $line gang, lives in $line and rides $line. $line's place is protected by the passcode $line, more info about the user here: $line "
 done < "$input"
