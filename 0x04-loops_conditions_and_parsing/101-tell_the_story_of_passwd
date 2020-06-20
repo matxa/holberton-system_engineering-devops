@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 
+USERNAME = $line
+GROUP_ID = $line
+HOME_DIRECTORY = $line
+COMMAND_SHELL = $line
+USER_ID = $line
+PASSWORD = $line
 input="/etc/passwd"
 while IFS= read -r line
 do
-    USERNAME = $line | cut -d':' -f 1
-    GROUP_ID = $line | cut -d':' -f 4
-    HOME_DIRECTORY = $line | cut -d':' -f 6
-    COMMAND_SHELL = $line | cut -d':' -f 7
-    USER_ID = $line | cut -d':' -f 3
-    PASSWORD = $line | cut -d':' -f 2
+    $USERNAME = $line | cut -d':' -f 1
+    $GROUP_ID = $line | cut -d':' -f 4
+    $HOME_DIRECTORY = $line | cut -d':' -f 6
+    $COMMAND_SHELL = $line | cut -d':' -f 7
+    $USER_ID = $line | cut -d':' -f 3
+    $PASSWORD = $line | cut -d':' -f 2
     echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $USERNAME"
 done < "$input"
