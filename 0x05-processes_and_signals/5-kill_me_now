@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script is display
 
-kill -9 bash
+killall -9 bash
