@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # This script is display
 
-pid=$$
-kill -9 $pid
+kill -9 bash
