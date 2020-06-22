@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is display
+
+trap "echo 'I am invincible!!!'" SIGINT SIGTERM
+
+Inf=1
+while [ $Inf -eq 1 ]
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
