@@ -9,7 +9,7 @@
 *   It has 7 layers.
 
 
-![alt_text](https://ibb.co/gTSG5HX)
+[OSI MODEL 7_layers](https://ibb.co/gTSG5HX)
 
 
 
