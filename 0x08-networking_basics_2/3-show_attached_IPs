@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# show ip 4
 ifconfig $(route -n | grep ^0.0.0.0 | awk '{print $NF}') | grep inet | grep -v inet6 | awk '{print $2}'
