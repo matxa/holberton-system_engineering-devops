@@ -3,4 +3,4 @@
 
 HOSTNAME=$(hostname)
 sudo sed -i "s/server_name _;/server_name _;\n\tadd_header X-Served-By $HOSTNAME;/" /etc/nginx/sites-available/default
-sudo service nginx restart
+
