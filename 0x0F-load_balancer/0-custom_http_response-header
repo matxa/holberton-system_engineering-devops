@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Add header to Nginx config file
 
-HOST_NAME=hostname
-echo "add_header X-Served-By $HOST_NAME;" | sudo tee -a /etc/nginx/nginx.conf
+HEADER='X-Served-By'
+HOST_NAME=$(hostname)
+sudo sed -i "s/http {/http {\n\tadd_header $HEADER $HOST_NAME;/" /etc/nginx/nginx.conf
 sudo service nginx restart
