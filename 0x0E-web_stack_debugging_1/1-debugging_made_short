@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# all the sed sript is doing is raplacing(s) every(g) 8080 with 80 and then using -i to overwrite the file
+# KILL the engine :)
+
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+pkill nginx
