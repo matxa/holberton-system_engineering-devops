@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# all the sed sript is doing is raplacing(s) every(g) 8080 with 80
+
+sed -i -e 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
