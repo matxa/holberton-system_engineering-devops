@@ -2,7 +2,7 @@
 # Install load balancer
 
 apt-get -y install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.0
+add-apt-repository ppa:vbernat/haproxy-1.8
 apt-get update
 apt-get -y install haproxy=1.8.\*
 printf %s "listen 1035-webs
