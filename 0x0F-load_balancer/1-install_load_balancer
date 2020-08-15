@@ -4,8 +4,7 @@
 apt-get -y install software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.0
 apt-get update
-apt-get -y install haproxy=2.0.\*
-echo "ENABLED=1" >> /etc/default/haproxy
+apt-get -y install haproxy=1.8.\*
 printf %s "listen 1035-webs
     bind :80
     balance roundrobin
