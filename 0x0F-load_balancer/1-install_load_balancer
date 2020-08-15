@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install load balancer
 
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.0
 sudo apt-get update
 sudo apt-get install haproxy=2.0.\*
+echo "ENABLED=1" >> /etc/default/haproxy
+service haproxy start
