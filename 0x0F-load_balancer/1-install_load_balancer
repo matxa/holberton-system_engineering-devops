@@ -1,30 +1,15 @@
 #!/usr/bin/env bash
 # Install load balancer
 
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:vbernat/haproxy-2.0
-sudo apt-get update
-sudo apt-get -y install haproxy=2.0.\*
+apt-get install software-properties-common
+add-apt-repository ppa:vbernat/haproxy-2.0
+apt-get update
+apt-get -y install haproxy=2.0.\*
 echo "ENABLED=1" >> /etc/default/haproxy
-printf %s "global
-    log 127.0.0.1 local0 notice
-    maxconn 2000
-    user haproxy
-    group haproxy
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    retries 3
-    option redispatch
-    timeout connect  5000
-    timeout client  10000
-    timeout server  10000
-listen webs
+printf %s "listen 1035-webs
     bind 0.0.0.0:80
     balance roundrobin
     server 1035-web-01 34.75.185.85:80 check
     server 1035-web-02 34.73.88.228:80 check
 " >> /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+systemctl restart haproxy
