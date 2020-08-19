@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# dig each sub-domain
+
+
+SUB_DOMAINS=('www' 'lb-01' 'web-01' 'web-02')
+
+DOMAIN_NAME=$1
+SUB_DOM=$2
+
+get_all_sub_dom () {
+    for SUB_DOMAIN in "${SUB_DOMAINS[@]}"
+    do
+    :
+        DOMAIN=$SUB_DOMAIN.$DOMAIN_NAME
+        AN=`dig $DOMAIN | awk -F : '/ANSWER SECTION:/ {getline;print;}'`
+        ANSWER="$SUB_DOMAIN $AN"
+        echo "$ANSWER" | awk '{split($0,a," "); print "The subdomain",a[1], "is a",a[5], "record and points to",a[6]}'
+    done
+}
+
+get_one_sub_dom () {
+    DOMAIN=$SUB_DOM.$DOMAIN_NAME
+    AN=`dig $DOMAIN | awk -F : '/ANSWER SECTION:/ {getline;print;}'`
+    ANSWER="$SUB_DOM $AN"
+    echo "$ANSWER" | awk '{split($0,a," "); print "The subdomain",a[1], "is a",a[5], "record and points to",a[6]}'
+}
+
+if [ "$#" -eq 1 ]
+then
+    get_all_sub_dom
+elif [ "$#" -eq 2 ]
+then
+    get_one_sub_dom
+fi
