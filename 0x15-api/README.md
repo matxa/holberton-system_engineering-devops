@@ -13,7 +13,7 @@ https://jsonplaceholder.typicode.com/</a>) using the requests module and saving 
     <b>Descrition</b>: format is the most common import and export format for spreadsheets and databases.
     <b>FUNCTIONS or METHODS used</b>:
         writer() - Return a writer object responsible for converting the user’s data into delimited
-        strings on the given file-like object. csvfile can be any object with a write() method
+            strings on the given file-like object. csvfile can be any object with a write() method
         writerow() - adds row to the file object specified by writer
 </pre>
 
