@@ -14,3 +14,9 @@ writerow(): adds row to the file object specified by writer]<br>
 STANDARD LIB:<br><b>open()</b>: To manipulate file<br>
 <b>list methos</b>: [ append() ]<br>
 <b>dictionary methods</b>: [update(), get(), items()]<br>
+
+HELPFUL LINKS<br>
+<a href="https://www.programiz.com/python-programming/json">JSON</a><br>
+<a href="https://www.programiz.com/python-programming/methods/built-in/open">open()</a><br>
+<a href="https://docs.python.org/3/library/csv.html">CSV</a><br>
+<a href="https://requests.readthedocs.io/en/master/">Requests</a><br>
