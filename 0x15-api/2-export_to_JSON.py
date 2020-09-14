@@ -2,9 +2,9 @@
 """Using ReSTFull  Api to manipulate fake data
 Exporting data to file in json format
 """
+import json
 import requests
 from sys import argv
-import json
 
 
 """request user by id"""

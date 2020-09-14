@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Using ReSTFull  Api to manipulate fake data"""
+import json
 import requests
 from sys import argv
-import json
 
 
 """request user by id"""
