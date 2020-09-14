@@ -43,6 +43,6 @@ https://jsonplaceholder.typicode.com/</a>) using the requests module and saving 
 <pre>
     <a  href="https://docs.python.org/3/library/csv.html">CSV</a>
     <a  href="https://www.programiz.com/python-programming/json">JSON</a>
-	<a  href="https://www.programiz.com/python-programming/methods/built-in/open">open()</a>
-	<a  href="https://requests.readthedocs.io/en/master/">Requests</a>
+    <a  href="https://www.programiz.com/python-programming/methods/built-in/open">open()</a>
+    <a  href="https://requests.readthedocs.io/en/master/">Requests</a>
 </pre>
