@@ -1,70 +1,46 @@
-PROJECT: <h1>0x15-api</h1>
+### <small>AUTHOR: MARCELO</small>
+### PROJECT
+<h1>0x15-api</h1>
 
+## DESCRITION
+<p>Make requests to API (<a href="https://jsonplaceholder.typicode.com/">
+https://jsonplaceholder.typicode.com/</a>) using the requests module and saving reponse to different file formats ( .json and .csv )</p>
 
-<br>
-DESCRITION: <p>Make requests to api(https://jsonplaceholder.typicode.com/) using the requests module and saving reponse to different file formats ( .json and .csv )</p>
+## MODULES
+<b>requests</b> &#9660;
+<pre>
+	<b>Descrition</b>: allows you to send HTTP/1.1 requests extremely easily
 
+	<b>FUNCTIONS or METHODS used</b>: 
+		get(): for sending a get request and saving HTTP body response
+</pre>
 
-<br>
-AUTHOR: <h3>MARCELO</h3>
+<b>sys</b> &#9660;
+<pre>
+	<b>Descrition</b>: manipulate different parts of the Python runtime environment.
+	<b>FUNCTIONS or METHODS used</b>:
+		argv: returns a list of command line arguments passed to a Python script.
+</pre>
 
+<b>json</b> &#9660;
+<pre>
+	<b>Descrition</b>: a popular data format used for representing structured data.
+	<b>FUNCTIONS or METHODS used</b>:
+		json.load(): get data from json file
+		json.dump(): save data to file in json format
+</pre>
 
-<br>
-MODULES: [<b>requests</b>: Descrition: allows you to send HTTP/1.1 requests extremely easily
+<b>csv</b> &#9660;
+<pre>
+	<b>Descrition</b>: format is the most common import and export format for spreadsheets and databases.
+	<b>FUNCTIONS or METHODS used</b>:
+		<b>writer()</b> - Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method
+		<b>writerow()</b> - adds row to the file object specified by writer
+</pre>
 
-
-<br>
-FUNCTIONS or METHODS used: get(): for sending a get request and saving HTTP body response
-
-
-<br>
-<b>sys</b>: Description: manipulate different parts of the Python runtime environment.
-
-
-<br>
-FUNCTIONS or METHODS used: argv: returns a list of command line arguments passed to a Python script.
-
-
-<br>
-<b>json</b>: Description: a popular data format used for representing structured data.
-
-
-<br>
-FUNCTIONS or METHODS used: json.load(): get data from json file
-
-
-<br>
-json.dumps(): save data to file in json format
-
-
-<br>
-<b>csv</b>: Description: format is the most common import and export format for spreadsheets and databases.
-
-
-<br>
-FUNCTIONS or METHODS used: writer(): Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method
-
-
-<br>
-writerow(): adds row to the file object specified by writer]
-
-
-<br>
-STANDARD LIB:<br><b>open()</b>: To manipulate file
-
-
-<br>
-<b>list methos</b>: [ append() ]
-
-
-<br>
-<b>dictionary methods</b>: [update(), get(), items()]
-
-
-<br>
-
-HELPFUL LINKS<br>
-<a href="https://www.programiz.com/python-programming/json">JSON</a><br>
-<a href="https://www.programiz.com/python-programming/methods/built-in/open">open()</a><br>
-<a href="https://docs.python.org/3/library/csv.html">CSV</a><br>
-<a href="https://requests.readthedocs.io/en/master/">Requests</a><br>
+## HELPFUL LINKS &#8744;
+<pre>	<a  href="https://www.programiz.com/python-programming/json">JSON</a>
+	<a  href="https://www.programiz.com/python-programming/methods/built-in/open">open()</a>
+	<a  href="https://docs.python.org/3/library/csv.html">CSV</a>
+	<a  href="https://requests.readthedocs.io/en/master/">Requests</a>
+</pre>
