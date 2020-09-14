@@ -41,4 +41,4 @@ for k, v in tasks.items():
 json_to_dump = {argv[1]: task_list}
 """export data to file json format"""
 with open('{}.json'.format(argv[1]), mode='w') as file:
-    json.dump(json_to_dump, file, indent=4)
+    json.dump(json_to_dump, file)
