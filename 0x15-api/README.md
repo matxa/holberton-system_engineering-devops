@@ -8,9 +8,9 @@ Functions or methods used: argv: returns a list of command line arguments passed
 <b>json</b>: Description: a popular data format used for representing structured data.
 Functions or methods used: json.load(): get data from json file
 json.dumps(): save data to file in json format
-<b>csv</b>: Description: format is the most common import and export format for spreadsheets and databases.\n
-Functions or methods used: writer(): Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method\n
-writerow(): adds row to the file object specified by writer]\n
-STANDARD LIB:\n<b>open()</b>: To manipulate file
+<b>csv</b>: Description: format is the most common import and export format for spreadsheets and databases.<br>
+Functions or methods used: writer(): Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method<br>
+writerow(): adds row to the file object specified by writer]<br>
+STANDARD LIB:<br><b>open()</b>: To manipulate file
 <b>list methos</b>: [ append() ]
 <b>dictionary methods</b>: [update(), get(), items()]
