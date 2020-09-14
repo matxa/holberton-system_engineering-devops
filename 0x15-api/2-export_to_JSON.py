@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """Using ReSTFull  Api to manipulate fake data
-Exporting data to file in csv format
+Exporting data to file in json format
 """
 import requests
 from sys import argv
 import json
-import csv
 
 
 """request user by id"""
