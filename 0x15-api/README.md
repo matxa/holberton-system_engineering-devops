@@ -10,32 +10,32 @@ https://jsonplaceholder.typicode.com/</a>) using the requests module and saving 
 
 <b>csv</b> &#9660;
 <pre>
-	<b>Descrition</b>: format is the most common import and export format for spreadsheets and databases.
-	<b>FUNCTIONS or METHODS used</b>:
-		<b>writer()</b> - Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method
-		<b>writerow()</b> - adds row to the file object specified by writer
+    <b>Descrition</b>: format is the most common import and export format for spreadsheets and databases.
+    <b>FUNCTIONS or METHODS used</b>:
+	    writer() - Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method
+	    writerow() - adds row to the file object specified by writer
 </pre>
 
 <b>json</b> &#9660;
 <pre>
-	<b>Descrition</b>: a popular data format used for representing structured data.
-	<b>FUNCTIONS or METHODS used</b>:
-		json.load(): get data from json file
-		json.dump(): save data to file in json format
+    <b>Descrition</b>: a popular data format used for representing structured data.
+    <b>FUNCTIONS or METHODS used</b>:
+	    json.load(): get data from json file
+	    json.dump(): save data to file in json format
 </pre>
 <b>requests</b> &#9660;
 <pre>
-	<b>Descrition</b>: allows you to send HTTP/1.1 requests extremely easily
+    <b>Descrition</b>: allows you to send HTTP/1.1 requests extremely easily
 
-	<b>FUNCTIONS or METHODS used</b>: 
-		get(): for sending a get request and saving HTTP body response
+    <b>FUNCTIONS or METHODS used</b>: 
+	    get(): for sending a get request and saving HTTP body response
 </pre>
 
 <b>sys</b> &#9660;
 <pre>
-	<b>Descrition</b>: manipulate different parts of the Python runtime environment.
-	<b>FUNCTIONS or METHODS used</b>:
-		argv: returns a list of command line arguments passed to a Python script.
+    <b>Descrition</b>: manipulate different parts of the Python runtime environment.
+    <b>FUNCTIONS or METHODS used</b>:
+	    argv: returns a list of command line arguments passed to a Python script.
 </pre>
 
 
