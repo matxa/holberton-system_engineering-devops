@@ -7,8 +7,10 @@ if __name__ == "__main__":
     import json
     import requests
 
+    request_users = requests.get('https://jsonplaceholder.typicode.com/users/')
+    users = request_users.json()
     list_of_users = {}
-    for i in range(1, 11):
+    for i in range(1, len(users) + 1):
         request_employee = requests.get(
             'https://jsonplaceholder.typicode.com/users/{}/'.format(i))
         user = json.loads(request_employee.text)
