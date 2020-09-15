@@ -34,9 +34,9 @@ if __name__ == "__main__":
         task_list = []
         for k, v in tasks.items():
             task_list.append({
+                "username": username,
                 "task": k,
                 "completed": v,
-                "username": username
             })
         list_of_users[i] = task_list
 
