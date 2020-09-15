@@ -7,6 +7,7 @@ import requests
 
 
 if __name__ == "__main__":
+    """dict to dict"""
     list_of_users = {}
     for i in range(1, 11):
         """request user by id"""
@@ -23,7 +24,7 @@ if __name__ == "__main__":
         """Dictionary to hold boolean value of completed tasks"""
         tasks = {}
         """json to list[dictionaries]"""
-        user_todos = json.loads(request_todos.text)
+        user_todos = request_todos.json()
         """loop through all the dictionary in
         the list and get bool value of key 'completed'
         """
