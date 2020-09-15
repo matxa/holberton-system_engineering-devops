@@ -1,16 +1,45 @@
 #!/usr/bin/python3
 """Using ReSTFull  Api to manipulate fake data
-Dictionary of list of dictionaries
+Exporting data to file in json format
 """
 import json
-import os
+import requests
+
 
 if __name__ == "__main__":
-    output_data = {}
+    list_of_users = {}
     for i in range(1, 11):
-        os.system('python3 2-export_to_JSON.py {}'.format(i))
-        with open('{}.json'.format(i), mode='r') as file:
-            data = json.load(file)
-        output_data.update(data)
-    with open('todo_all_employees.json', mode='w') as todo_all_employees:
-        json.dump(output_data, todo_all_employees)
+        """request user by id"""
+        request_employee = requests.get(
+            'https://jsonplaceholder.typicode.com/users/{}/'.format(i))
+        """json to dictionary"""
+        user = json.loads(request_employee.text)
+        """Get username"""
+        username = user.get("username")
+
+        """requesting all of users todo"""
+        request_todos = requests.get(
+            'https://jsonplaceholder.typicode.com/users/{}/todos'.format(i))
+        """Dictionary to hold boolean value of completed tasks"""
+        tasks = {}
+        """json to list[dictionaries]"""
+        user_todos = json.loads(request_todos.text)
+        """loop through all the dictionary in
+        the list and get bool value of key 'completed'
+        """
+        for dictionary in user_todos:
+            tasks.update(
+                {dictionary.get("title"): dictionary.get("completed")})
+
+        task_list = []
+        for k, v in tasks.items():
+            task_list.append({
+                "task": k,
+                "completed": v,
+                "username": username
+            })
+        list_of_users[i] = task_list
+
+    """export data to file json format"""
+    with open('todo_all_employees.json', mode='w') as file:
+        json.dump(list_of_users, file)
