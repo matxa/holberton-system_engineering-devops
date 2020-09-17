@@ -7,8 +7,11 @@ import requests
 
 
 def number_of_subscribers(subreddit):
+    """request to get number of subs
+    """
     response = requests.get(
-        'https://www.reddit.com/r/{}/about.json'.format(subreddit))
+        'https://www.reddit.com/r/{}/about.json'.format(subreddit),
+        allow_redirects=False)
     if response.status_code == 200:
         json_data = response.json()
         data = json_data.get('data')
