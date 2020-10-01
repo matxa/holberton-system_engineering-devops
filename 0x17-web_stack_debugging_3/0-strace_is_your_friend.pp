@@ -3,8 +3,8 @@ exec { 'apt-update':
 }
 
 package { 'apache2':
+  ensure  => installed,
   require => Exec['apt-update'],
-  ensure => installed,
 }
 
 service { 'apache2':
