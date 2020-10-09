@@ -1,7 +1,8 @@
 #Fixing nginx ULIMIT
 
-file { '/etc/default/nginx':
-  content => 'ULIMIT="-n 4096"',
+exec { 'replace_limit':
+  command => 'sed -i "/ULIMIT=/c\ULIMIT=\'-n 4096\'" /etc/default/nginx',
+  path    => '/usr/bin:/usr/sbin:/bin',
 }
 
 exec { 'nginx_restart':
