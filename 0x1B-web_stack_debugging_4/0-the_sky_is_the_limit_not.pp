@@ -7,6 +7,6 @@ exec { 'replace_limit':
 
 exec { 'nginx_restart':
   path    => '/usr/bin:/usr/sbin:/bin',
-  command => 'sudo service nginx restart',
+  command => 'service nginx restart',
 }
 
